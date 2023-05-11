@@ -1,0 +1,124 @@
+<div class="outer" [@fadeInOut]>
+  <header>
+    <div class="navbar navbar-dark shadow-sm" style="background-color: rgba(252, 254, 253, 0.5)">
+      <div class="navbar-brand align-items-center d-flex">
+       
+        <div class="search-container">
+          <input type="text" class="form-control search-input" placeholder="Search products" [(ngModel)]="searchTerm" (keyup)="search($event)">
+          <span class="search-icon fas fa-search"></span>
+        </div>
+  
+        <button (click)="gotoCart()" class="btn btn-primary cart-button">
+          <i class="fas fa-cart-plus"></i>
+          <div class="badge bg-danger">{{totalItem}}</div>
+        </button>
+  
+      </div>
+    </div>
+  </header>
+  
+  
+  
+  
+  <div class="card-top p-3 shadow" style=" background-color: rgba(255, 255, 255, 0.1);">
+    <div class="container d-flex justify-content-between">
+      <div class="item">
+        <a class="link" (click)="filter('')">
+          <h6>All products</h6>
+        </a>
+      </div>
+      <div class="item">
+        <a class="link" (click)="filter('Mens')">
+          <h6>Mens</h6>
+        </a>
+      </div>
+      <div class="item">
+        <a class="link" (click)="filter('Womens')">
+          <h6>Womens</h6>
+        </a>
+      </div>
+      <div class="item">
+        <a class="link" (click)="filter('Baby')">
+          <h6>Baby</h6>
+        </a>
+      </div>
+      <div class="item">
+        <a class="link" (click)="filter('Sports')">
+          <h6>Sports</h6>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  
+   <div class="container">
+    <div class="row mt-4">
+      <ng-container *ngFor="let item of filterCategory | filter:searchKey:'productName'">
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <div class="img-container">
+              <img class="circle-img" src="{{picPath}}/{{item.picture}}"/>
+              <!-- <img mat-card-avatar src="../../../../assets/cart.png" /> -->
+              <div class="overlay"></div>
+            </div>
+            <div class="card-body">
+              <h4 class="card-title">{{item.productName}}</h4>
+  
+              <p class="card-text">{{ item.isAvailable ? 'Available' : 'Not Available' }}</p>
+  
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+  
+                  <div class="btn-group">
+  
+                    <button type="button" (click)="openProductDeatailsDialog(item.productID)" class="btn btn-sm btn-outline-light mr-2" style="background-color: rgba(45, 87, 177, 0.8);">
+                      <i class="fas fa-eye"></i> View details
+                    </button>
+  
+  
+                    <ng-container *ngIf="role != 'admin' && role != 'user'">
+                      <button type="button" class="btn btn-sm btn-outline-light" style="background-color: rgb(59, 74, 207); margin-left: 10px;" (click)="gotoLogin()">
+                        <i class="fas fa-cart-plus"></i> Add to cart
+                      </button>
+                    </ng-container>
+                     
+                    <ng-container *ngIf="role == 'admin' || role == 'user'">
+                      <button type="button" class="btn btn-sm btn-outline-light" style="background-color: rgb(59, 74, 207); margin-left: 10px;" (click)="addtocart(item)">
+                        <i class="fas fa-cart-plus"></i> Add to cart
+                      </button>
+                    </ng-container>
+                    
+
+
+
+                    <!-- <button type="button" class="btn btn-sm btn-outline-light" style="background-color: rgb(59, 74, 207); margin-left: 10px;" (click)="addToCart(item)">
+                      <i class="fas fa-cart-plus"></i> Add to cart
+                    </button> -->
+
+
+                  </div>
+                  
+                  
+                </div>
+                <small class="text-muted">Taka {{item.sellPrice}}</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+
+
+  <!-- For Animation -->
+  <div *ngFor="let bubble of bubbles" class="bubble" [style.top]="bubble.top" [style.left]="bubble.left"
+  [style.width]="bubble.size" [style.height]="bubble.size" [style.background-color]="bubble.color"
+  [style.animation-delay]="bubble.delay + 's'" (animationend)="onAnimationEnd(bubble)"></div>
+
+
+
+</div>

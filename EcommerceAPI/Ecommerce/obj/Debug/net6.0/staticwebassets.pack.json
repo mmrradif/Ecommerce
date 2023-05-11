@@ -1,0 +1,61 @@
+{
+  "Files": [
+    {
+      "Id": "G:\\Ecommerce\\EcommerceAPI\\Ecommerce\\wwwroot\\Pictures\\3pics.png",
+      "PackagePath": "staticwebassets\\Pictures\\3pics.png"
+    },
+    {
+      "Id": "G:\\Ecommerce\\EcommerceAPI\\Ecommerce\\wwwroot\\Pictures\\6f57e779-9253-457d-9d5d-cf7873ec3226.png",
+      "PackagePath": "staticwebassets\\Pictures\\6f57e779-9253-457d-9d5d-cf7873ec3226.png"
+    },
+    {
+      "Id": "G:\\Ecommerce\\EcommerceAPI\\Ecommerce\\wwwroot\\Pictures\\Shirt.png",
+      "PackagePath": "staticwebassets\\Pictures\\Shirt.png"
+    },
+    {
+      "Id": "G:\\Ecommerce\\EcommerceAPI\\Ecommerce\\wwwroot\\Pictures\\baby-frock.png",
+      "PackagePath": "staticwebassets\\Pictures\\baby-frock.png"
+    },
+    {
+      "Id": "G:\\Ecommerce\\EcommerceAPI\\Ecommerce\\wwwroot\\Pictures\\baby-t-shirt.png",
+      "PackagePath": "staticwebassets\\Pictures\\baby-t-shirt.png"
+    },
+    {
+      "Id": "G:\\Ecommerce\\EcommerceAPI\\Ecommerce\\wwwroot\\Pictures\\football.png",
+      "PackagePath": "staticwebassets\\Pictures\\football.png"
+    },
+    {
+      "Id": "G:\\Ecommerce\\EcommerceAPI\\Ecommerce\\wwwroot\\Pictures\\ladies-t-shirt.png",
+      "PackagePath": "staticwebassets\\Pictures\\ladies-t-shirt.png"
+    },
+    {
+      "Id": "G:\\Ecommerce\\EcommerceAPI\\Ecommerce\\wwwroot\\Pictures\\sharee.png",
+      "PackagePath": "staticwebassets\\Pictures\\sharee.png"
+    },
+    {
+      "Id": "G:\\Ecommerce\\EcommerceAPI\\Ecommerce\\wwwroot\\Pictures\\shirt2.png",
+      "PackagePath": "staticwebassets\\Pictures\\shirt2.png"
+    },
+    {
+      "Id": "G:\\Ecommerce\\EcommerceAPI\\Ecommerce\\wwwroot\\Pictures\\t-shirt.png",
+      "PackagePath": "staticwebassets\\Pictures\\t-shirt.png"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.Ecommerce.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.Ecommerce.props",
+      "PackagePath": "build\\Ecommerce.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.Ecommerce.props",
+      "PackagePath": "buildMultiTargeting\\Ecommerce.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.Ecommerce.props",
+      "PackagePath": "buildTransitive\\Ecommerce.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

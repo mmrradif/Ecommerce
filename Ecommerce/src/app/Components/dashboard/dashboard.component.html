@@ -1,0 +1,29 @@
+
+<div class="outer" [@fadeInOut]>
+
+
+    <div class="container mt-5 p-5" style="background-color: rgba(252, 254, 253, 1);">
+        <h4>Ecommerce Assignment</h4>
+        <h6>Created By</h6>
+        <h2>Md. Mahbur Rahman</h2>
+        <img class="avatar" src="../../../../assets/mahbur.jpg" />
+    </div>
+    
+
+    <!-- <div>
+        <h4>Ecommerce Assignment</h4>
+        <h6>Created By</h6>
+        <h2>Md. Mahbur Rahman</h2>
+        <img mat-card-avatar src="../../../../assets/mahbur.jpg" />
+    </div> -->
+
+
+
+    <!-- For Animation -->
+    <div *ngFor="let bubble of bubbles" class="bubble" [style.top]="bubble.top" [style.left]="bubble.left"
+    [style.width]="bubble.size" [style.height]="bubble.size" [style.background-color]="bubble.color"
+    [style.animation-delay]="bubble.delay + 's'" (animationend)="onAnimationEnd(bubble)"></div>
+</div>
+
+
+
